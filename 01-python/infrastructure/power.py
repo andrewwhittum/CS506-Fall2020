@@ -1,3 +1,16 @@
 def draw_power_plant():
-    print("power plant not found")
+    print("    (  )         ( )  ( )  ( )")
+    print("   (    )       ( )  ( )  ( )")
+    print("  (      )     ( )  ( )  ( )")
+    print(" (        )   ( )  ( )  ( )")
+    print("\          /  | |  | |  | |   ")
+    print(" \        /   | |  | |  | |   ")
+    print("  \      /    | |  | |  | |   ")
+    print("  /      \    | |  | |  | |   ")
+    print(" /        \   | |  | |  | |   ")
+    print("/__________\__|_|__|_|__|_|___")
+    print("|                            |")
+    print("|                            |")
+    print("|     _                      |")
+    print("|    | |                     |") 
     return
