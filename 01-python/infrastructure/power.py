@@ -1,4 +1,4 @@
-def draw_power_plant():
+def draw_power_plant(height = 1):
     print("    (  )         ( )  ( )  ( )")
     print("   (    )       ( )  ( )  ( )")
     print("  (      )     ( )  ( )  ( )")
