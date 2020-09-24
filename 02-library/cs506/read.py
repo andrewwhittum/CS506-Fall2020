@@ -4,7 +4,7 @@ def read_csv(csv_file_path):
         in row major.
     """
 
-    # initialize a list that will contain lists for each line
+    # initialize a list that will eventually contain lists for each line
     ret = []
 
     # read the lines in the file

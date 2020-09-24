@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-def euclidean_dist(x, y):
-    raise NotImplementedError()
-=======
-from math import sqrt
-
 # Andrew Whittum contributions to CS506-Fall2020 code base
 
-def euclidean_dist(x, y):
+from math import sqrt
 
+def euclidean_dist(x, y):
     # input checks
     if check_for_null(x, y) or check_for_diff_length(x, y):
         return ValueError
@@ -15,21 +10,13 @@ def euclidean_dist(x, y):
     # take the square root of sum of distances squared for ith value in each vector
     distance = 0
     for i, j in zip(x, y):
-        distance += (j - i)**2
+        distance += (j - i) ** 2
     distance = sqrt(distance)
-    
+
     return distance
->>>>>>> dd32d18... read and sim passed all tox checks
 
 
 def manhattan_dist(x, y):
-<<<<<<< HEAD
-    raise NotImplementedError()
-
-def jaccard_dist(x, y):
-    raise NotImplementedError()
-=======
-
     # run checks
     if check_for_null(x, y) or check_for_diff_length(x, y):
         return ValueError
@@ -38,11 +25,11 @@ def jaccard_dist(x, y):
     distance = 0
     for i, j in zip(x, y):
         distance += abs(j - i)
-        
+
     return distance
 
-def jaccard_dist(x, y):
 
+def jaccard_dist(x, y):
     # run checks
     if check_for_null(x, y) or check_for_diff_length(x, y):
         return ValueError
@@ -51,7 +38,7 @@ def jaccard_dist(x, y):
     union = list(set(x + y))
 
     # generate the intersection of the two vectors
-    intersection =[]
+    intersection = []
     for elem in x:
         if elem in y:
             if elem in intersection:
@@ -60,26 +47,20 @@ def jaccard_dist(x, y):
                 intersection.append(elem)
 
     # divide number of values in both by total number of unique values between the two vectors, take 1 minus this value
-    distance = 1 - (len(intersection)/len(union))
-    
-    return distance
->>>>>>> dd32d18... read and sim passed all tox checks
+    distance = 1 - (len(intersection) / len(union))
 
+    return distance
 
 
 def cosine_sim(x, y):
-
-<<<<<<< HEAD
-# Feel free to add more
-=======
     # run checks
     if check_for_null(x, y) or check_for_diff_length(x, y):
         return ValueError
 
     # calculate the dot product of the two vectors
     dot = 0
-    for i, j in zip(x,y):
-        dot += i*j
+    for i, j in zip(x, y):
+        dot += i * j
 
     # calculate the magnitude of the two vectors
     mag_x = magnitude(x)
@@ -96,7 +77,7 @@ def cosine_sim(x, y):
     # print(theta)
 
     # calculate similarity score
-    similarity = dot/(mag_x*mag_y)
+    similarity = dot / (mag_x * mag_y)
 
     return similarity
 
@@ -108,12 +89,14 @@ def check_for_null(x, y):
     else:
         return False
 
+
 # check length of x and y
 def check_for_diff_length(x, y):
     if len(x) != len(y):
         return True
     else:
         return False
+
 
 # calculate the magnitude of each vector using pythagorean theorem
 def magnitude(vector):
@@ -122,4 +105,3 @@ def magnitude(vector):
         mag += i ** 2
     mag = sqrt(mag)
     return mag
->>>>>>> dd32d18... read and sim passed all tox checks
